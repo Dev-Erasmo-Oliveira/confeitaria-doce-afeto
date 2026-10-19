@@ -1,0 +1,78 @@
+.section {
+  background: linear-gradient(135deg, var(--terracotta-100) 0%, var(--cream-100) 55%, var(--cream-200) 100%);
+  overflow: hidden;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2.25rem, 1.5rem + 4vw, 4.5rem);
+  align-items: center;
+}
+
+.content {
+  max-width: 34rem;
+}
+
+.title {
+  font-size: var(--fs-h2);
+}
+
+.text {
+  margin-top: 1.25rem;
+}
+
+.button {
+  margin-top: 2rem;
+}
+
+.note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+  padding: 0.9rem 1.1rem;
+  border-radius: var(--radius-md);
+  background: rgba(253, 250, 245, 0.75);
+  border: 1px solid var(--line);
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+.note svg {
+  flex: none;
+  margin-top: 0.15rem;
+  color: var(--terracotta-600);
+}
+
+.visual {
+  position: relative;
+  max-width: 26rem;
+  justify-self: center;
+  width: 100%;
+}
+
+.frame {
+  position: relative;
+  border-radius: 220px var(--radius-lg) var(--radius-lg) var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 4 / 4.4;
+  box-shadow: var(--shadow-lg);
+  background: var(--beige-300);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  }
+
+  .visual {
+    max-width: none;
+  }
+}

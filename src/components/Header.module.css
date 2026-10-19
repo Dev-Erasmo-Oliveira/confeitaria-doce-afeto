@@ -1,0 +1,175 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: transparent;
+  transition: background-color 0.3s var(--ease), box-shadow 0.3s var(--ease),
+    border-color 0.3s var(--ease), padding 0.3s var(--ease);
+  border-bottom: 1px solid transparent;
+}
+
+.header[data-scrolled='true'] {
+  background: rgba(253, 250, 245, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom-color: var(--line);
+  box-shadow: 0 10px 30px -26px rgba(45, 26, 18, 0.6);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 72px;
+}
+
+/* Marca ------------------------------------------------------------------ */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  flex: none;
+}
+
+.mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--gold-400);
+  color: var(--terracotta-600);
+  background: rgba(253, 250, 245, 0.7);
+  transition: background-color 0.3s var(--ease), color 0.3s var(--ease);
+}
+
+.brand:hover .mark {
+  background: var(--terracotta-600);
+  color: var(--cream-50);
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brandName {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--chocolate-800);
+}
+
+.brandSub {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--gold-600);
+}
+
+/* Navegação -------------------------------------------------------------- */
+.nav {
+  display: none;
+}
+
+.nav ul {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 2vw, 2rem);
+}
+
+.navLink {
+  position: relative;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--chocolate-700);
+  padding: 0.4rem 0;
+  transition: color 0.2s var(--ease);
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: var(--terracotta-600);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s var(--ease);
+}
+
+.navLink:hover,
+.navLink:focus-visible {
+  color: var(--terracotta-700);
+}
+
+.navLink:hover::after,
+.navLink:focus-visible::after {
+  transform: scaleX(1);
+}
+
+/* Ações ------------------------------------------------------------------ */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+/* O botão fica escondido no mobile para dar espaço ao menu. O display é
+   controlado no elemento Wrapper para não conflitar com a classe global
+   `.btn`, que também define `display: inline-flex`. */
+.ctaWrap {
+  display: none;
+}
+
+.ctaWrap :global(a) {
+  padding: 0.7rem 1.25rem;
+  min-height: 44px;
+  font-size: 0.88rem;
+}
+
+.burger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--line-strong);
+  color: var(--chocolate-800);
+  background: rgba(253, 250, 245, 0.6);
+  transition: background-color 0.2s var(--ease), color 0.2s var(--ease);
+}
+
+.burger:hover {
+  background: var(--chocolate-800);
+  color: var(--cream-50);
+}
+
+@media (min-width: 640px) {
+  .ctaWrap {
+    display: inline-flex;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav {
+    display: block;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  .inner {
+    min-height: 84px;
+  }
+}

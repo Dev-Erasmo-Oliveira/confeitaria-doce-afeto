@@ -1,0 +1,205 @@
+.footer {
+  background: var(--chocolate-900);
+  color: rgba(253, 250, 245, 0.78);
+  padding-top: 0;
+}
+
+/* Aviso de demonstração --------------------------------------------------- */
+.demo {
+  background: var(--gold-500);
+  color: var(--chocolate-900);
+}
+
+.demoInner {
+  padding-block: 0.7rem;
+}
+
+.demoText {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.demoText strong {
+  font-weight: 800;
+}
+
+/* Colunas ---------------------------------------------------------------- */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.25rem;
+  padding-block: clamp(2.75rem, 2rem + 3vw, 4.5rem);
+}
+
+.brand {
+  max-width: 26rem;
+}
+
+.brandLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(201, 169, 98, 0.55);
+  color: var(--gold-400);
+}
+
+.brandName {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--cream-50);
+}
+
+.tagline {
+  margin-top: 0.9rem;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--gold-400);
+}
+
+.slogan {
+  margin-top: 0.75rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.4;
+  color: rgba(253, 250, 245, 0.82);
+}
+
+.columnTitle {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cream-50);
+  margin-bottom: 1rem;
+}
+
+.column ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.92rem;
+  color: rgba(253, 250, 245, 0.72);
+  transition: color 0.2s var(--ease);
+}
+
+.link:hover {
+  color: var(--gold-400);
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.addressLine {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  color: rgba(253, 250, 245, 0.72);
+}
+
+.addressLine svg {
+  flex: none;
+  margin-top: 0.22rem;
+  color: var(--gold-500);
+}
+
+.hours li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  font-size: 0.85rem;
+  color: rgba(253, 250, 245, 0.68);
+}
+
+.hoursLine {
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+}
+
+.hours svg {
+  flex: none;
+  color: var(--gold-500);
+  transform: translateY(2px);
+}
+
+.hoursDay {
+  color: rgba(253, 250, 245, 0.8);
+}
+
+.hoursValue {
+  margin-left: 1.3rem;
+  color: rgba(253, 250, 245, 0.55);
+  font-size: 0.8rem;
+}
+
+/* Base ------------------------------------------------------------------- */
+.bottom {
+  border-top: 1px solid rgba(253, 250, 245, 0.12);
+}
+
+.bottomInner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-block: 1.25rem;
+}
+
+.copy {
+  font-size: 0.8rem;
+  color: rgba(253, 250, 245, 0.55);
+}
+
+.topLink {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--gold-400);
+  border-bottom: 1px solid rgba(201, 169, 98, 0.45);
+  padding-bottom: 0.15rem;
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+
+.topLink:hover {
+  color: var(--cream-50);
+  border-color: var(--cream-50);
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 1.4fr 0.8fr 1.1fr 1.1fr 0.9fr;
+    gap: 2rem;
+  }
+}

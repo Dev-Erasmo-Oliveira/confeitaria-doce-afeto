@@ -1,0 +1,109 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2.25rem, 1.5rem + 4vw, 4rem);
+  align-items: center;
+}
+
+.visual {
+  position: relative;
+  max-width: 30rem;
+}
+
+.frame {
+  position: relative;
+  border-radius: var(--radius-lg) 220px var(--radius-lg) var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 4 / 4.6;
+  box-shadow: var(--shadow-lg);
+  background: var(--beige-300);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+}
+
+.stamp {
+  position: absolute;
+  right: -0.75rem;
+  bottom: 1.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: var(--chocolate-800);
+  color: var(--cream-50);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.15;
+  text-align: center;
+  padding: 0.5rem;
+  border: 1px solid var(--gold-500);
+  box-shadow: var(--shadow-md);
+  transform: rotate(-6deg);
+}
+
+.paragraphs {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: var(--ink-soft);
+  max-width: 58ch;
+}
+
+.highlights {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+.highlights li {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.93rem;
+  font-weight: 600;
+  color: var(--chocolate-700);
+}
+
+.highlightIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  flex: none;
+  border-radius: 50%;
+  background: var(--cream-50);
+  border: 1px solid var(--gold-200);
+  color: var(--terracotta-600);
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr);
+    gap: clamp(3rem, 2rem + 4vw, 5.5rem);
+  }
+
+  .visual {
+    max-width: none;
+  }
+
+  .highlights {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .highlights li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+    line-height: 1.45;
+  }
+}

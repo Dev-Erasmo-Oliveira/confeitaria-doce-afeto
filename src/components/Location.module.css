@@ -1,0 +1,115 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2.25rem, 1.5rem + 4vw, 4rem);
+  align-items: start;
+}
+
+.content {
+  max-width: 34rem;
+}
+
+.card {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 1.35rem 1.5rem;
+  border-radius: var(--radius-md);
+  background: var(--cream-100);
+  border: 1px solid var(--line);
+}
+
+.cardIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  flex: none;
+  border-radius: 50%;
+  background: var(--terracotta-100);
+  color: var(--terracotta-600);
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.street {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--chocolate-800);
+}
+
+.line {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+
+.reference {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+.placeholder {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--gold-600);
+}
+
+.placeholder svg {
+  flex: none;
+}
+
+.mapButton {
+  margin-top: 1.25rem;
+}
+
+.noMap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+.noMap svg {
+  flex: none;
+  color: var(--gold-600);
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.visual {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  box-shadow: var(--shadow-md);
+  background: var(--beige-300);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(3rem, 2rem + 4vw, 5rem);
+  }
+}

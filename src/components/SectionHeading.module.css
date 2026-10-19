@@ -1,0 +1,45 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 62ch;
+}
+
+.title {
+  font-size: var(--fs-h2);
+}
+
+.text {
+  margin-top: 1.15rem;
+}
+
+.center {
+  align-items: center;
+  text-align: center;
+  margin-inline: auto;
+}
+
+.center .text {
+  margin-inline: auto;
+}
+
+.right {
+  align-items: flex-end;
+  text-align: right;
+  margin-left: auto;
+}
+
+.right .text {
+  margin-left: auto;
+}
+
+@media (max-width: 640px) {
+  .right {
+    align-items: flex-start;
+    text-align: left;
+    margin-left: 0;
+  }
+
+  .right .text {
+    margin-left: 0;
+  }
+}
